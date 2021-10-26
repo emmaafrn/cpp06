@@ -1,10 +1,10 @@
-NAME = 
+NAME = veritableType
 
 SRCS = main.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 
-INC = 
+INC = A.hpp B.hpp C.hpp Base.hpp
 
 CXX  = clang++
 
