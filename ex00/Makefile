@@ -1,10 +1,10 @@
 NAME = convert
 
-SRCS = main.cpp
+SRCS = main.cpp convert.cpp checking.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 
-INC = 
+INC = convert.hpp
 
 CXX  = clang++
 

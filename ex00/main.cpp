@@ -1,24 +1,22 @@
-#include <iostream>
-#include <string>
-#include <cctype>
-
-void	charChecking(int c){
-	if (!isprint(c)){
-		std::cout << "char : Non displayable\n";
-	}
-	else
-		std::cout << c << std::endl;
-}
+#include "convert.hpp"
 
 int	main(int argc, char **argv){
-	std::string str;
+	std::string	str;
+	int			type;
 
 	if (argc != 2){
 		std::cout << "Error, wrong number of arguments" << std::endl;
 		return (0);
 	}
 	str = argv[1];
-	if (str.length() == 1)
-		charChecking(static_cast<int>(argv[1][0]) - 48);
-	
+	if (specialCases(str))
+		return (1);
+	type  = typeChecking(str);
+	if (!type){
+		impossibleType(str);
+		return (0);
+	}
+	else if (type)
+		Convert(std::stod(argv[1]));
+	return (1);
 }
