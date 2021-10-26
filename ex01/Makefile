@@ -1,10 +1,10 @@
-NAME = 
+NAME = Serialisation
 
 SRCS = main.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 
-INC = 
+INC = Serialisation.hpp
 
 CXX  = clang++
 
