@@ -14,7 +14,7 @@ bool	typeChecking(std::string str){
 			i++;
 		}
 	}
-	if (i == (size - 1) && str[i] == 'f') // Float
+	if (size > 1 && i == (size - 1) && str[i] == 'f') // Float
 		return (1);
 	if (j > 1 || i < size) // Error
 		return (0);
